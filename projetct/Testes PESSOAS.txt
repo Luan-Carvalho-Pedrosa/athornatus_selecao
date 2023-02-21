@@ -1,0 +1,164 @@
+###########################CADASTRAR PESSOAS ###################################
+#Entrada
+{
+	"nome": "Chaves",
+	"dataNascimento": "05/07/1940"
+}
+#Saida
+{
+	"id": 1,
+	"nome": "Chaves",
+	"dataNascimento": "05/07/1940"
+}
+#Entrada
+{
+	"nome": "Quico",
+	"dataNascimento": "05/07/1942"
+}
+#Saida
+{
+	"id": 2,
+	"nome": "Quico",
+	"dataNascimento": "05/07/1942"
+}
+#Entrada
+{
+	"nome": "Ramon",
+	"dataNascimento": "08/07/1912"
+}
+#Saida
+{
+	"id": 3,
+	"nome": "Ramon",
+	"dataNascimento": "08/07/1912"
+}
+#Entrada
+{
+	"nome": "",
+	"dataNascimento": "08/07/1912"
+}
+#Saida
+"timestamp": "2023-02-21T13:14:47.626+00:00",
+	"status": 500,
+	"error": "Internal Server Error",	
+
+#Entrada
+{
+	"nome": "Lucas",
+	"dataNascimento": ""
+}
+#Saida
+{
+	"timestamp": "2023-02-21T13:15:49.049+00:00",
+	"status": 500,
+	"error": "Internal Server Error",
+
+###################LISTAR PESSOAS######################################
+#Saida
+[
+	{
+		"id": 1,
+		"nome": "Chaves",
+		"dataNascimento": "05/07/1940"
+	},
+	{
+		"id": 2,
+		"nome": "Quico",
+		"dataNascimento": "05/07/1942"
+	},
+	{
+		"id": 3,
+		"nome": "Ramon",
+		"dataNascimento": "08/07/1912"
+	}
+]
+############### PEGAR PESSOAS POR ID###############################
+#ENTRADA localhost:8080/usuario/1
+#SAIDA
+{
+	"id": 1,
+	"nome": "Chaves",
+	"dataNascimento": "05/07/1940"
+}
+#ENTRADA localhost:8080/usuario/13
+#SAIDA
+"No body returned for response"
+
+################## Atualizar Pessoas #####################################
+#Entrada  localhost:8080/usuario/1
+{
+	"nome": "Chaves del ocho",
+	"dataNascimento": ""
+}
+#Saida
+{
+	"id": 1,
+	"nome": "Chaves del ocho",
+	"dataNascimento": "05/07/1940"
+}
+
+#Entrada  localhost:8080/usuario/2
+{
+	"nome": "",
+	"dataNascimento": "30/10/1950"
+}
+#Saida
+{
+	"id": 2,
+	"nome": "Quico",
+	"dataNascimento": "30/10/1950"
+}
+
+#Entrada  localhost:8080/usuario/5
+{
+	"nome": "",
+	"dataNascimento": "30/10/1950"
+}
+#Saida  
+"timestamp": "2023-02-21T13:22:36.172+00:00",
+	"status": 500,
+	"error": "Internal Server Error"
+
+################## Listar Pessoas apos atualizacao #####################################
+#Saida
+[
+	{
+		"id": 1,
+		"nome": "Chaves del ocho",
+		"dataNascimento": "05/07/1940"
+	},
+	{
+		"id": 2,
+		"nome": "Quico",
+		"dataNascimento": "30/10/1950"
+	},
+	{
+		"id": 3,
+		"nome": "Ramon",
+		"dataNascimento": "08/07/1912"
+	}
+]
+###################### Deletar Pessoas ###############
+#Entrada localhost:8080/usuario/1
+#Saida
+{
+	"id": 1,
+	"nome": "Chaves del ocho",
+	"dataNascimento": "05/07/1940"
+}
+################## Listar Pessoas apos deleção #####################################
+#Saida
+[
+	{
+		"id": 2,
+		"nome": "Quico",
+		"dataNascimento": "30/10/1950"
+	},
+	{
+		"id": 3,
+		"nome": "Ramon",
+		"dataNascimento": "08/07/1912"
+	}
+]
+
+

@@ -1,0 +1,120 @@
+Enderecos e Pessoas previamente cadastradas
+
+##################### Pessoas #########
+[
+	{
+		"id": 1,
+		"nome": "Roger",
+		"dataNascimento": "12/07/1996"
+	},
+	{
+		"id": 2,
+		"nome": "Rogerinho",
+		"dataNascimento": "12/07/1996"
+	}
+]
+
+##################### Enderecos #########
+[
+	{
+		"id": 1,
+		"logradouro": "Rua ggggg",
+		"numero": 48,
+		"cidade": "Nova York",
+		"cep": "500863"
+	},
+	{
+		"id": 2,
+		"logradouro": "Rua kkkkkk",
+		"numero": 488,
+		"cidade": "Nova York",
+		"cep": "660863"
+	},
+	{
+		"id": 3,
+		"logradouro": "Rua hhhhh",
+		"numero": 478,
+		"cidade": "Nova York",
+		"cep": "760863"
+	}
+]
+
+####### Vincular Enderecos ########
+#Entrada localhost:8080/usuario/vincularEndereco/1/1
+{
+	"principal": true
+}
+#Saida 
+{
+	"mensagem": "Vinculo realizado",
+	"idPessoa": 1,
+	"idEndereco": 1,
+	"isPrincipal": true
+}
+
+#Entrada localhost:8080/usuario/vincularEndereco/1/2
+{
+	"principal": false
+}
+#Saida 
+{
+	"mensagem": "Vinculo realizado",
+	"idPessoa": 1,
+	"idEndereco": 2,
+	"isPrincipal": false
+}
+
+#Entrada localhost:8080/usuario/vincularEndereco/2/3
+{
+	"principal": false
+}
+#Saida 
+{
+	"mensagem": "Vinculo realizado",
+	"idPessoa": 2,
+	"idEndereco": 3,
+	"isPrincipal": false
+}
+
+################## Listar enderecos por pessoa ##################
+#Entrada localhost:8080/usuario/listarEnderecos/1
+#Saida
+[
+	{
+		"id": 1,
+		"logradouro": "Rua ggggg",
+		"numero": 48,
+		"cidade": "Nova York",
+		"cep": "500863"
+	},
+	{
+		"id": 2,
+		"logradouro": "Rua kkkkkk",
+		"numero": 488,
+		"cidade": "Nova York",
+		"cep": "660863"
+	}
+]
+#Entrada localhost:8080/usuario/listarEnderecos/2
+#Saida
+[
+	{
+		"id": 3,
+		"logradouro": "Rua hhhhh",
+		"numero": 478,
+		"cidade": "Nova York",
+		"cep": "760863"
+	}
+]
+
+################## Pegar endereco principal ####################
+#Entrada localhost:8080/usuario/enderecoPrincipal/1
+#Saida
+{
+	"id": 1,
+	"logradouro": "Rua ggggg",
+	"numero": 48,
+	"cidade": "Nova York",
+	"cep": "500863"
+}
+

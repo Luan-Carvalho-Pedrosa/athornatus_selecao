@@ -1,0 +1,83 @@
+
+
+
+
+########## Cadastrar Enderecos ################
+#Entrada
+{
+"logradouro": "Rua rua",
+		"numero": 402,
+		"cidade": "Rio Branco",
+		"cep": "000866"
+}
+#Saida
+{
+		"id": 1,
+		"logradouro": "Rua rua",
+		"numero": 402,
+		"cidade": "Rio Branco",
+		"cep": "000866"
+	}
+
+#Entrada
+{
+"logradouro": "Rua ny",
+		"numero": 402,
+		"cidade": "Rio Branco",
+		"cep": "000867"
+}
+#Saida
+{
+	"id": 2,
+	"logradouro": "Rua ny",
+	"numero": 402,
+	"cidade": "Rio Branco",
+	"cep": "000867"
+}
+#Entrada
+{
+"logradouro": "Rua street",
+		"numero": 52,
+		"cidade": "Nova York",
+		"cep": "100867"
+}
+#Saida
+{
+	"id": 3,
+	"logradouro": "Rua street",
+	"numero": 52,
+	"cidade": "Nova York",
+	"cep": "100867"
+}
+
+
+
+
+
+
+
+
+############################ Listar pessoas ###############################
+[
+	{
+		"id": 1,
+		"logradouro": "Rua rua",
+		"numero": 402,
+		"cidade": "Rio Branco",
+		"cep": "000866"
+	},
+	{
+		"id": 2,
+		"logradouro": "Rua ny",
+		"numero": 402,
+		"cidade": "Rio Branco",
+		"cep": "000867"
+	},
+	{
+		"id": 3,
+		"logradouro": "Rua street",
+		"numero": 52,
+		"cidade": "Nova York",
+		"cep": "100867"
+	}
+]
